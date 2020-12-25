@@ -79,7 +79,7 @@
         <forum>http://forum.kodi.tv/forumdisplay.php?fid=218</forum>
         <website></website>
         <email></email>
-        <source>https://github.com/nobossage/skin.mimic</source>
+        <source>https://github.com/nobossage/repo/raw/main</source>
         <assets>
             <icon>resources/icon.png</icon>
             <fanart>resources/fanart.jpg</fanart>
