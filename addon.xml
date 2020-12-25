@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.mimic"
-  version="6.0.1"
+  version="6.0.4"
   name="Mimic"
   provider-name="braz(Noble)">
     <requires>
@@ -94,6 +94,6 @@
             <screenshot>resources/screenshot-09.jpg</screenshot>
             <screenshot>resources/screenshot-10.jpg</screenshot>
         </assets>
-        <news>6.0.1[CR]- Updated for Kodi 18 Leia.[CR]- Add progress bar at PVR (LiveTV).</news>
+        <news>6.0.4[CR]- Updated for Kodi 18 Leia.[CR]- Add info block at play cinema.</news>
     </extension>
 </addon>

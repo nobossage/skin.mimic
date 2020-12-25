@@ -191,6 +191,67 @@
                 <label>$INFO[VideoPlayer.StartTime] - $INFO[PVR.EpgEventFinishTime]</label>
             </control>
         </control>
+        <!-- **********************************  -->
+        <control type="group">
+            <animation effect="slide" start="0,108" end="0,0" time="200">WindowOpen</animation>
+            <animation effect="slide" start="0,108" end="0,0" time="200">VisibleChange</animation>
+            <animation effect="slide" start="0,0" end="0,108" time="200">WindowClose</animation>
+            <top>772</top>
+            <visible>!VideoPlayer.Content(livetv) + VideoPlayer.Content(episodes) | !VideoPlayer.Content(livetv) + VideoPlayer.Content(movies)</visible>
+            <control type="image">
+                <width>1920</width>
+                <height>238</height>
+                <texture colordiffuse="background">$VAR[CommonBackgroundOverlay]</texture>
+            </control>
+            <control type="image">
+                <top>8</top>
+                <width>1920</width>
+                <height>230</height>
+                <texture colordiffuse="background">dialog.png</texture>
+            </control>
+            <control type="image">
+                <top>8</top>
+				<left>30</left>
+                <width>220</width>
+                <height>220</height>
+                <aspectratio aligny="center" align="center">keep</aspectratio>
+                <texture background="true">$INFO[Player.Art(thumb)]</texture>
+            </control>
+            <control type="label">
+                <left>300</left>
+                <top>18</top>				
+                <width>1560</width>
+                <height>40</height>
+                <font>font30</font>
+                <aligny>top</aligny>
+                <label>$VAR[PlayerTitleLabelVar] [COLOR highlight]($INFO[VideoPlayer.Year])[/COLOR]</label>
+                <visible>!VideoPlayer.Content(episodes) + VideoPlayer.Content(movies)</visible>
+                <scroll>true</scroll>
+            </control>
+            <control type="label">
+                <left>300</left>
+                <top>18</top>
+                <width>1560</width>
+                <height>40</height>
+                <font>font30</font>
+                <aligny>top</aligny>
+                <label>$INFO[VideoPlayer.Season,,X]$INFO[VideoPlayer.Episode,,. ]$VAR[PlayerTitleLabelVar] [COLOR highlight]($INFO[VideoPlayer.TVShowTitle])[/COLOR]</label>
+                <visible>VideoPlayer.Content(episodes)</visible>
+                <scroll>true</scroll>
+            </control>
+            <control type="textbox">
+                <width>1560</width>
+                <height>160</height>
+				<left>300</left>
+				<top>78</top>
+                <font>font14_textbox</font>
+                <aligny>top</aligny>
+                <include>AutoscrollDefault</include>
+                <label>[COLOR highlight]$INFO[VideoPlayer.Tagline,, ][/COLOR]$INFO[VideoPlayer.Plot]</label>
+                <visible>VideoPlayer.Content(episodes) | VideoPlayer.Content(movies)</visible>
+            </control>
+        </control>
+        <!--- *******************************************  -->
         <control type="grouplist">
             <animation effect="slide" start="0,100" end="0,0" time="200">WindowOpen</animation>
             <!--<animation effect="slide" start="0,400" end="0,0" time="200">VisibleChange</animation>-->
